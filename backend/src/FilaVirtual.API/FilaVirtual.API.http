@@ -1,0 +1,36 @@
+# Exemplos para testar a API pelo Visual Studio / VS Code (extensão REST Client).
+# Rode a API com o perfil http e execute uma requisição por vez.
+@api = http://localhost:5171
+
+### RF01 - Cadastro de cidadão
+POST {{api}}/api/auth/cadastro
+Content-Type: application/json
+
+{
+  "nomeCompleto": "Maria da Silva",
+  "cpf": "529.982.247-25",
+  "dataNascimento": "1990-05-20",
+  "email": "maria@email.com",
+  "senha": "senha-segura",
+  "telefone": "(61) 99999-0000"
+}
+
+### RF02 - Login (copie o "token" da resposta para a variável abaixo)
+POST {{api}}/api/auth/login
+Content-Type: application/json
+
+{ "email": "maria@email.com", "senha": "senha-segura" }
+
+###
+@token = cole-o-token-aqui
+
+### RF12 - Meus dados
+GET {{api}}/api/usuarios/me
+Authorization: Bearer {{token}}
+
+### RF12 - Atualizar dados (a troca de senha é opcional)
+PUT {{api}}/api/usuarios/me
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{ "email": "maria@email.com", "telefone": "61 3333-4444", "senhaAtual": null, "novaSenha": null }

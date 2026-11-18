@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Ícone neutro (três pessoas em fila). Não usa brasão nem logotipo do gov.br. -->
+  <rect width="32" height="32" rx="6" fill="#1351b4"/>
+  <g fill="#fff">
+    <circle cx="8" cy="12" r="3"/><rect x="5" y="16" width="6" height="8" rx="2"/>
+    <circle cx="16" cy="12" r="3"/><rect x="13" y="16" width="6" height="8" rx="2"/>
+    <circle cx="24" cy="12" r="3"/><rect x="21" y="16" width="6" height="8" rx="2"/>
+  </g>
+</svg>
